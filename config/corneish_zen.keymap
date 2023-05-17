@@ -30,9 +30,9 @@
 // | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | CTRL |
 //                    | ALT | SPC | NUM |   | FUN | BKSP | ALT |
       bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSLH
-   &kp LSHFT &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp RSHFT
-   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
+   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U   &kp I     &kp O   &kp P    &kp BSLH
+   &kp LSHFT &kp A &kp S &kp D &kp F &kp G   &kp H &kp J   &kp K     &kp L   &kp SEMI &kp RSHFT
+   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M   &kp COMMA &kp DOT &kp FSLH &kp RCTRL
                   &kp LALT &kp SPACE &mo 1   &mo 2 &kp BSPC &kp RALT
       >;
     };
@@ -40,15 +40,15 @@
     numsym_layer {
       label = "NUMSYM";
 // -----------------------------------------------------------------------------------------
-// |  ESC |  1  |  2  |  3  |  4  |  5  |   | KP7 | KP8 | KP9 | KP+ |  `  |  |   |
-// |      |  6  |  7  |  8  |  9  |  0  |   | KP4 | KP5 | KP6 | KP- |  '  |      |
-// |      |  _  |  -  |  =  |  [  |  ]  |   | KP1 | KP2 | KP3 | KP. |  \  |      |
-//                    |     | ENT |     |   | KP0 | DEL |     |
+// |  ESC |  1  |  2  |  3  |  4  |  5  |   | KP+ | KP7 | KP8 | KP9 |  `  |  |   |
+// |      |  6  |  7  |  8  |  9  |  0  |   | KP- | KP4 | KP5 | KP6 |  '  |      |
+// |      |  _  |  -  |  =  |  [  |  ]  |   | KP0 | KP1 | KP2 | KP3 | KP. |      |
+//                    |     | ENT |     |   |     | DEL |     |
       bindings = <
-   &kp ESC &kp N1    &kp N2    &kp N3    &kp N4       &kp N5     &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS &kp PIPE  &trans
-   &trans  &kp N6    &kp N7    &kp N8    &kp N9       &kp N0     &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS  &kp SQT   &trans
-   &trans  &kp UNDER &kp MINUS &kp EQUAL &kp LBKT     &kp RBKT   &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_DOT   &kp BSLH  &trans
-                          	   &trans    &kp KP_ENTER &trans     &kp KN_N0 &kp DEL   &trans
+   &kp ESC &kp N1    &kp N2    &kp N3    &kp N4       &kp N5     &kp KP_PLUS  &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp GRAVE  &kp PIPE
+   &trans  &kp N6    &kp N7    &kp N8    &kp N9       &kp N0     &kp KP_MINUS &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp SQT    &trans
+   &trans  &kp UNDER &kp MINUS &kp EQUAL &kp LBKT     &kp RBKT   &kp KP_N0    &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_DOT &trans
+                          	   &trans    &kp KP_ENTER &trans     &trans       &kp DEL   &trans
       >;
     };
 
