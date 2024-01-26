@@ -24,46 +24,46 @@
     compatible = "zmk,keymap";
     default_layer {
       label = "QWERTY";
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  \   |
-// | SHFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  | SHFT |
-// | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | CTRL |
-//                    | ALT | SPC | NUM |   | FUN | BKSP | ALT |
+// -------------------------------------------------------------------------------
+// |  ALT |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | ALT  |
+// | SHFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  | SHFT |
+// | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  | CTRL |
+//                    | FUN | SPC | NUM |   | RET | BSP | GUI |
       bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U   &kp I     &kp O   &kp P    &kp BSLH
-   &kp LSHFT &kp A &kp S &kp D &kp F &kp G   &kp H &kp J   &kp K     &kp L   &kp SEMI &kp RSHFT
-   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M   &kp COMMA &kp DOT &kp FSLH &kp RCTRL
-                  &kp LALT &kp SPACE &mo 1   &mo 2 &kp BSPC &kp RALT
+&kp LALT  &kp Q &kp W &kp E &kp R     &kp T   &kp Y   &kp U    &kp I     &kp O   &kp P    &kp RALT
+&kp LSHFT &kp A &kp S &kp D &kp F     &kp G   &kp H   &kp J    &kp K     &kp L   &kp SEMI &kp RSHFT
+&kp LCTRL &kp Z &kp X &kp C &kp V     &kp B   &kp N   &kp M    &kp COMMA &kp DOT &kp FSLH &kp RCTRL
+                      &mo 2 &kp SPACE &mo 1   &mo RET &kp BSPC &kp LGUI
       >;
     };
 
     numsym_layer {
-      label = "NUMSYM";
-// -----------------------------------------------------------------------------------------
-// |  ESC |  1  |  2  |  3  |  4  |  5  |   | KP+ | KP7 | KP8 | KP9 |  `  |  |   |
-// |      |  6  |  7  |  8  |  9  |  0  |   | KP- | KP4 | KP5 | KP6 |  '  |      |
-// |      |  _  |  -  |  =  |  [  |  ]  |   | KP0 | KP1 | KP2 | KP3 | KP. |      |
-//                    |     | ENT |     |   |     | DEL |     |
+      label = "NUMNAV";
+// -------------------------------------------------------------------------------
+// |      |  1  |  2  |  3  |  4  |  5  |   | HOM | PDN | PUP | END |  `  |      |
+// |      |  6  |  7  |  8  |  9  |  0  |   | LFT | DWN |  UP | RGT |  '  |      |
+// |      | ESC |  -  |  =  |  [  |  ]  |   | BR- | VO- | VO+ | BR+ |  \  |      |
+//                    |     | INS |     |   | MUT | DEL |     |
       bindings = <
-   &kp ESC &kp N1    &kp N2    &kp N3    &kp N4       &kp N5     &kp KP_PLUS  &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp GRAVE  &kp PIPE
-   &trans  &kp N6    &kp N7    &kp N8    &kp N9       &kp N0     &kp KP_MINUS &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp SQT    &trans
-   &trans  &kp UNDER &kp MINUS &kp EQUAL &kp LBKT     &kp RBKT   &kp KP_N0    &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_DOT &trans
-                          	   &trans    &kp KP_ENTER &trans     &trans       &kp DEL   &trans
+&trans &kp N1  &kp N2    &kp N3    &kp N4   &kp N5     &kp HOME     &kp PG_DN    &kp PG_UP    &kp END      &kp GRAVE &trans
+&trans &kp N6  &kp N7    &kp N8    &kp N9   &kp N0     &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp SQT   &trans
+&trans &kp ESC &kp MINUS &kp EQUAL &kp LBKT &kp RBKT   &kp C_BRI_DN &kp C_VOL_DN &kp C_VOL_UP &kp C_BRI_UP &kp BSLH  &trans
+                         &trans    &kp INS  &trans     &kp C_MUTE   &kp DEL      &trans
       >;
     };
 
     functs_layer {
-      label = "FUNCTS";
-// -----------------------------------------------------------------------------------------
-// |  ESC | F1  | F2  | F3  | F4  | F5  |   | HOM | PDN | PUP | END |     | PRSC |
-// |      | F6  | F7  | F8  | F9  | F10 |   | LFT | DWN |  UP | RGT |     |      |
-// |      | F11 | F12 | F13 | F14 | F15 |   | MUT | VDN | VUP | >|| |     |      |
-//                    |     | RET |     |   |     |     |     |
+      label = "FUNPAD";
+// -------------------------------------------------------------------------------
+// |      | F1  | F2  | F3  | F4  | F5  |   | KP/ | KP7 | KP8 | KP9 | KP* |      |
+// |      | F6  | F7  | F8  | F9  | F10 |   | KP- | KP4 | KP5 | KP6 | KP+ |      |
+// |      | F11 | F12 | TAB | PS  | PAU |   | KP= | KP1 | KP2 | KP3 | KP. |      |
+//                    |     | RET |     |   | ENT | KP0 |     |
       bindings = <
-   &kp ESC &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp HOME   &kp PG_DN    &kp PG_UP    &kp END   &trans &kp PSCRN
-   &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10   &kp LEFT   &kp DOWN     &kp UP       &kp RIGHT &trans &trans
-   &trans  &kp F11 &kp F12 &kp F13 &kp F14 &kp F15   &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PP  &trans &trans
-                    	     &trans  &kp RET &trans    &trans     &trans       &trans
+&trans &kp F1  &kp F2  &kp F3  &kp F4    &kp F5            &kp KP_DIVIDE &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MULTIPLY &trans
+&trans &kp F6  &kp F7  &kp F8  &kp F9    &kp F10           &kp KP_MINUS  &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS     &trans
+&trans &kp F11 &kp F12 &kp TAB &kp PSCRN &kp PAUSE_BREAK   &kp KP_EQUAL  &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_DOT      &trans
+                    	 &trans  &kp RET   &trans            &kp KP_ENTER  &kp KP_N0 &trans
       >;
     };
 
@@ -75,9 +75,10 @@
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    |     |     |     |   |     |     |     |
       bindings = <
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans &trans &trans &trans &trans &trans
-   &trans     &trans       &trans       &trans       &trans       &trans         &trans &trans &trans &trans &trans &trans
-   &trans     &trans       &trans       &trans       &trans       &trans         &trans &trans &trans &trans &trans &trans
+&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans &trans &trans &trans &trans &trans
+&trans     &trans       &trans       &trans       &trans       &trans         &trans &trans &trans &trans &trans &trans
+&trans     &trans       &trans       &trans       &trans       &trans         &trans &trans &trans &trans &trans &trans
+                                     &trans       &trans       &trans         &trans &trans &trans
       >;
     };
   };
