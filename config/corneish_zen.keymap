@@ -43,12 +43,12 @@
 // |      |  1  |  2  |  3  |  4  |  5  |   | HOM | PDN | PUP | END |  `  |      |
 // |      |  6  |  7  |  8  |  9  |  0  |   | LFT | DWN |  UP | RGT |  '  |      |
 // |      | ESC |  -  |  =  |  [  |  ]  |   | BR- | VO- | VO+ | BR+ |  \  |      |
-//                    |     | INS |     |   | MUT | DEL |     |
+//                    |     | RET |     |   | MUT | DEL |     |
       bindings = <
 &trans &kp N1  &kp N2    &kp N3    &kp N4   &kp N5     &kp HOME     &kp PG_DN    &kp PG_UP    &kp END      &kp GRAVE &trans
 &trans &kp N6  &kp N7    &kp N8    &kp N9   &kp N0     &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp SQT   &trans
 &trans &kp ESC &kp MINUS &kp EQUAL &kp LBKT &kp RBKT   &kp C_BRI_DN &kp C_VOL_DN &kp C_VOL_UP &kp C_BRI_UP &kp BSLH  &trans
-                         &trans    &kp INS  &trans     &kp C_MUTE   &kp DEL      &trans
+                         &trans    &kp RET  &trans     &kp C_MUTE   &kp DEL      &trans
       >;
     };
 
@@ -58,12 +58,12 @@
 // |      | F1  | F2  | F3  | F4  | F5  |   | KP/ | KP7 | KP8 | KP9 | KP* |      |
 // |      | F6  | F7  | F8  | F9  | F10 |   | KP- | KP4 | KP5 | KP6 | KP+ |      |
 // |      | F11 | F12 | TAB | PS  | PAU |   | KP= | KP1 | KP2 | KP3 | KP. |      |
-//                    |     | RET |     |   | ENT | KP0 |     |
+//                    |     | INS |     |   | ENT | KP0 |     |
       bindings = <
 &trans &kp F1  &kp F2  &kp F3  &kp F4    &kp F5            &kp KP_DIVIDE &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MULTIPLY &trans
 &trans &kp F6  &kp F7  &kp F8  &kp F9    &kp F10           &kp KP_MINUS  &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS     &trans
 &trans &kp F11 &kp F12 &kp TAB &kp PSCRN &kp PAUSE_BREAK   &kp KP_EQUAL  &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_DOT      &trans
-                    	 &trans  &kp RET   &trans            &kp KP_ENTER  &kp KP_N0 &trans
+                    	 &trans  &kp INS   &trans            &kp KP_ENTER  &kp KP_N0 &trans
       >;
     };
 
